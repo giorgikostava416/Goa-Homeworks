@@ -1,131 +1,207 @@
-/* Base Styles */
-body {
-    font-family: 'Helvetica Neue', sans-serif;
+/* General Reset */
+
+/* General Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif; /* You can replace this with a more stylish font */
+    text-transform: uppercase; /* For a sleek, modern look */
+    letter-spacing: 1px; /* Spacing for elegance */
+}
+
+/* Specific Heading Styles */
+h1 {
+    font-size: 3.5em; /* Large main title */
+    color: #001e4d; /* BMW blue */
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 2.5em; /* Subheading */
+    color: #333; /* Dark gray */
+    margin: 15px 0;
+    border-bottom: 3px solid #ffcc00; /* BMW gold underline */
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 2em; /* Section titles */
+    color: #001e4d; /* BMW blue */
+    margin: 10px 0;
+    position: relative; /* For decorative lines */
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 50px; /* Width of the decorative line */
+    height: 4px; /* Height of the decorative line */
+    background-color: #ffcc00; /* BMW gold */
+    margin: 10px auto; /* Centering */
+}
+
+h4 {
+    font-size: 1.5em; /* Smaller section title */
     color: #333;
+    margin: 10px 0;
+    font-weight: 600; /* Semi-bold */
+}
+
+h5 {
+    font-size: 1.2em; /* Subsection title */
+    color: #555; /* Lighter gray */
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 1em; /* Smallest heading */
+    color: #777; /* Even lighter gray */
+}
+
+
+
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
-    color: #0072ce; /* BMW blue */
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #0056a3; /* Darker blue on hover */
-}
-
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #eef2f3;
 }
 
 /* Header */
 header {
-    background-color: #000;
+    background-color: #001e4d; /* BMW blue */
     color: #fff;
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
-    margin: 0;
-    font-size: 28px;
+    font-size: 2.8em;
+    letter-spacing: 2px;
 }
 
-header nav ul {
+/* Navigation */
+nav {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    padding: 15px 20px;
 }
 
-header nav ul li {
-    margin-left: 20px;
+nav ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
-header nav ul li a {
-    color: #fff;
-    padding: 10px 15px;
+nav a {
+    text-decoration: none;
+    color: #001e4d; /* BMW blue */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00; /* BMW gold */
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('hero-image.jpg');
+    background-image: url('bmw-hero.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
-    height: 500px;
-    position: relative;
-    color: white;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    position: relative;
 }
 
 .hero h2 {
-    font-size: 48px;
-    margin: 0;
-}
-
-/* Features Section */
-.features {
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 0;
-}
-
-.features .feature {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    width: 30%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.features .feature h3 {
-    margin-top: 0;
-}
-
-/* Footer */
-footer {
-    background-color: #000;
-    color: #fff;
+    font-size: 4em;
+    letter-spacing: 3px;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    width: 100%;
-    margin-top: 40px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Content Section */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
 
-    header nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
+.section h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #001e4d; /* BMW blue */
+}
 
-    .features {
-        flex-direction: column;
-    }
+.section p {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
 
-    .features .feature {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+/* General Paragraph Styles */
+p {
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    font-size: 1.1em; /* Slightly larger than default for readability */
+    line-height: 1.6; /* Improved line spacing for clarity */
+    color: #333; /* Dark gray for easy reading */
+    margin: 15px 0; /* Spacing between paragraphs */
+}
 
-    .hero {
-        height: 300px;
-    }
+/* Emphasis Styles */
+p strong {
+    color: #001e4d; /* BMW blue for emphasis */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+p em {
+    color: #ffcc00; /* BMW gold for italics */
+}
+
+/* Blockquote Styles */
+blockquote {
+    font-size: 1.3em; /* Larger font for quotes */
+    color: #555; /* Medium gray for a softer look */
+    border-left: 5px solid #001e4d; /* BMW blue border */
+    padding: 10px 15px; /* Padding around the quote */
+    margin: 20px 0; /* Spacing before and after the quote */
+    background-color: #f9f9f9; /* Light background for distinction */
+    font-style: italic; /* Italicized for style */
+}
+
+/* List Styles */
+ul {
+    list-style-type: disc; /* Bullet points */
+    margin-left: 20px; /* Indentation */
+}
+
+ul li {
+    margin: 5px 0; /* Spacing between list items */
+    font-size: 1.1em; /* Consistent font size */
+    color: #333; /* Same dark gray for consistency */
+}
+
+/* Link Styles */
+a {
+    color: #001e4d; /* BMW blue for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links for visibility */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    color: #ffcc00; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover for feedback */
 }
